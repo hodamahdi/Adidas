@@ -1,0 +1,187 @@
+*
+{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif
+}
+body
+{
+   background:linear-gradient(#111,#222);
+   height: 100vh ;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.container
+{
+    background-color: rgba(141, 137, 137, 0.1);
+    width: 80%;
+    height:80%;
+    margin: auto;
+    overflow: hidden;
+   
+   
+}
+nav
+{
+   
+    display: flex;
+    justify-content: space-between;
+    /* background-color: aqua; */
+   padding: 15px;
+}
+ul
+{
+    display: flex;
+    justify-content: space-around;
+    
+
+}
+.nav-logo
+{
+    font-size: 30px;
+    font-weight: 700;
+   
+}
+.nav-logo a
+{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+.nav-list
+{
+    width: 50%;
+    
+}
+.nav-list li
+{
+    list-style-type: none;
+   
+}
+.nav-list li a
+{
+    
+   text-decoration: none;
+   color: white;
+   font-size: 20px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   transition: .5s;
+}
+.nav-list li a:hover
+{
+  color: red;
+}
+body::after
+{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: red;
+    clip-path: circle(30% at right 70%);
+    z-index: -1;
+}
+.content 
+{
+    /* background-color: aquamarine; */
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.content-text
+{
+    color: white;
+    width: 40%;
+
+}
+.content-text h1
+{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.content-text p
+{
+    font-size: 18px;
+    letter-spacing: 2px;
+    padding: 10px;
+    line-height: 25px;
+}
+.content-imge
+{
+    width: 40%;
+}
+.content-imge img
+{
+    width:100%;
+}
+
+
+@media screen  and ( max-width:900px){
+    nav 
+    {
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+    }
+}
+
+@media screen  and ( max-width:850px){
+
+    .content
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       
+    }
+
+
+    .content-text ,.content-imge
+    {
+        width: 70%;
+       
+    }
+    .content-imge img {
+        width: 100%;
+    }
+    .content-text h1
+    {
+        font-size: 35px;
+    }
+    
+    body::after
+{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: red;
+    clip-path: circle(40% at bottom );
+    z-index: -1;
+
+}
+}
+
+    
+@media screen  and (max-width:700px){
+    .content-text ,.content-imge
+    {
+        width: 100%;
+    }
+    .content-imge img 
+    {
+        width: 100%;
+    }
+    .nav-list li
+    {
+        padding: 10px;
+    }
+}
